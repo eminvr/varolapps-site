@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router'
 import { localeLabels, supportedLocales } from '../../i18n/config'
-import { useLocale } from '../../i18n/useLocale'
+import { setStoredLocalePreference, useLocale } from '../../i18n/useLocale'
 
 const linkClassName = ({ isActive }: { isActive: boolean }) =>
   [
@@ -38,6 +38,7 @@ export function Header() {
                   locale === option ? 'bg-white text-neutral-950 shadow-sm' : 'text-neutral-500 hover:text-neutral-950',
                 ].join(' ')}
                 key={option}
+                onClick={() => setStoredLocalePreference(option)}
                 to={switchPath(option)}
               >
                 {localeLabels[option]}

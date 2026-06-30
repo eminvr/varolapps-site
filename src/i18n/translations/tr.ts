@@ -162,7 +162,7 @@ export const tr = {
         },
         {
           question: 'Hesabımı silebilir miyim?',
-          answer: 'Evet. Hesap silme adımları Delete Account sayfasında açıklanacaktır.',
+          answer: 'Evet. Hesap silme adımları Hesap Silme sayfasında açıklanacaktır.',
         },
       ],
     },
@@ -171,6 +171,17 @@ export const tr = {
       description: 'Evlio yakında mobil uygulama mağazalarında yerini alacak.',
       support: 'Destek Al',
       deleteAccount: 'Hesap Silme Bilgisi',
+    },
+    trust: {
+      title: 'Güven ve destek',
+      description: 'Evlio hakkında gizlilik, kullanım şartları, destek ve hesap silme bilgilerine buradan ulaşabilirsiniz.',
+      links: {
+        privacy: 'Gizlilik Politikası',
+        terms: 'Kullanım Şartları',
+        support: 'Destek',
+        deleteAccount: 'Hesap Silme',
+        faq: 'SSS',
+      },
     },
   },
 }

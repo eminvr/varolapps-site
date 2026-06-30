@@ -14,7 +14,10 @@ type LegalPageKey =
   | 'evlioCookies'
 
 const supportEmail = 'support@varolapps.com'
-const updatedAt = 'June 30, 2026'
+const updatedAt = {
+  tr: '30 Haziran 2026',
+  en: 'June 30, 2026',
+} as const
 
 export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
   tr: {
@@ -25,12 +28,12 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       routeKey: 'privacy',
       seoTitle: 'Gizlilik Politikası',
       seoDescription: 'Varol Apps genel gizlilik politikasını, toplanan bilgileri, üçüncü taraf servisleri ve iletişim bilgilerini okuyun.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
         {
           id: 'company-overview',
-          title: 'Company overview',
+          title: 'Şirket özeti',
           paragraphs: [
             'Varol Apps sade ve kullanışlı mobil uygulamalar geliştiren bağımsız bir uygulama stüdyosudur. Bu politika, Varol Apps web sitesi ve şirket düzeyindeki servisler için genel gizlilik yaklaşımını açıklar.',
             'Her mobil uygulama kendi özellikleri, veri sağlayıcıları ve hesap davranışları nedeniyle ayrıca uygulama özel gizlilik politikasına sahip olabilir.',
@@ -38,7 +41,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         },
         {
           id: 'information-collected',
-          title: 'Information collected',
+          title: 'Toplanan bilgiler',
           paragraphs: [
             'Varol Apps; destek talepleri, e-posta mesajları ve hesapla ilgili başvurular gibi doğrudan sağladığınız bilgileri işleyebilir.',
             'Web sitesini ziyaret ettiğinizde tarayıcı türü, cihaz bilgisi, ziyaret edilen sayfalar ve yaklaşık bölge gibi temel teknik bilgiler hizmet güvenilirliği için işlenebilir.',
@@ -46,7 +49,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         },
         {
           id: 'third-party-services',
-          title: 'Third-party services',
+          title: 'Üçüncü taraf servisler',
           paragraphs: [
             'Varol Apps ürünlerini işletmek için barındırma, analiz, hata raporlama, e-posta, ödeme ve benzeri güvenilir üçüncü taraf servislerden yararlanabilir.',
             'Her uygulamada kullanılan servisler farklı olabilir. Ayrıntılar için ilgili uygulamanın gizlilik politikasını inceleyin.',
@@ -54,7 +57,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         },
         {
           id: 'contact',
-          title: 'Contact',
+          title: 'İletişim',
           paragraphs: [`Gizlilik soruları için ${supportEmail} adresinden Varol Apps ile iletişime geçebilirsiniz. Bu metin bilgilendirme amaçlıdır ve hukuki danışmanlık yerine geçmez.`],
         },
       ],
@@ -66,12 +69,12 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       routeKey: 'terms',
       seoTitle: 'Kullanım Şartları',
       seoDescription: 'Varol Apps genel kullanım, fikri mülkiyet, sorumluluk ve iletişim şartlarını inceleyin.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
         {
           id: 'general-usage',
-          title: 'General usage',
+          title: 'Genel kullanım',
           paragraphs: [
             'Varol Apps web sitesi veya servislerini kullanarak bunları sorumlu, güvenli ve yürürlükteki mevzuata uygun şekilde kullanmayı kabul edersiniz.',
             'Mobil uygulamalar; hesaplar, abonelikler, satın almalar veya paylaşımlı alanlar gibi özellikler için ek uygulama özel şartlara sahip olabilir.',
@@ -79,7 +82,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         },
         {
           id: 'intellectual-property',
-          title: 'Intellectual property',
+          title: 'Fikri mülkiyet',
           paragraphs: [
             'Varol Apps; web sitesi ve uygulamalarında yer alan tasarım, marka, yazılım, metin ve ürün materyallerinin sahibi veya lisans sahibidir.',
             'Bu materyaller, izin verilmedikçe kopyalanamaz, değiştirilemez, dağıtılamaz veya yeniden kullanılamaz.',
@@ -87,7 +90,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         },
         {
           id: 'liability',
-          title: 'Liability',
+          title: 'Sorumluluk',
           paragraphs: [
             'Varol Apps ürünlerini güvenilir ve kullanışlı tutmak için çalışır; ancak servisler mevcut halleriyle sunulur ve zaman içinde değişebilir.',
             'Yürürlükteki hukukun izin verdiği ölçüde Varol Apps, ürünlerin kullanımından doğabilecek dolaylı veya arızi zararlardan sorumlu değildir.',
@@ -95,7 +98,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         },
         {
           id: 'contact',
-          title: 'Contact',
+          title: 'İletişim',
           paragraphs: [`Bu şartlarla ilgili sorularınızı ${supportEmail} adresine iletebilirsiniz.`],
         },
       ],
@@ -107,7 +110,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       routeKey: 'support',
       seoTitle: 'Destek',
       seoDescription: 'Varol Apps destek ekibiyle iletişime geçin ve mevcut uygulamalar için destek bağlantılarını bulun.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
         {
@@ -123,8 +126,8 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
           title: 'Uygulamalar',
           paragraphs: ['Varol Apps yeni ürünler ekledikçe uygulama özel destek sayfaları burada listelenecektir.'],
           links: [
-            { label: 'Evlio Privacy Policy', to: '/evlio/privacy' },
-            { label: 'Evlio Terms', to: '/evlio/terms' },
+            { label: 'Evlio Gizlilik Politikası', to: '/evlio/privacy' },
+            { label: 'Evlio Kullanım Şartları', to: '/evlio/terms' },
             { label: 'Evlio Destek', to: '/evlio/support' },
           ],
         },
@@ -137,7 +140,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       routeKey: 'deleteAccount',
       seoTitle: 'Hesap Silme',
       seoDescription: 'Varol Apps ürünleri için uygulama özel hesap silme talimatlarına ulaşın.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
         {
@@ -165,12 +168,12 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Evlio’nun hesap bilgileri, kullanıcı içerikleri, Firebase, AdMob, RevenueCat, offline sync, admin panel erişimi ve veri silme yaklaşımını öğrenin.',
       ogTitle: 'Evlio Gizlilik Politikası',
       ogDescription: 'Evlio için veri toplama, üçüncü taraf servisler, satın almalar, güvenlik ve hesap silme bilgileri.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
         {
           id: 'introduction',
-          title: 'Introduction',
+          title: 'Giriş',
           paragraphs: [
             'Bu Gizlilik Politikası, Evlio mobil uygulamasını kullandığınızda hangi bilgilerin işlenebileceğini ve bu bilgilerin hangi amaçlarla kullanılabileceğini açıklar.',
             'Evlio; evlilik hazırlığı, çeyiz, alışveriş, yapılacaklar ve ortak workspace yönetimi için geliştirilmiş bir mobil uygulamadır. Bu metin bilgilendirme amacı taşır ve hukuki danışmanlık yerine geçmez.',
@@ -178,46 +181,46 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         },
         {
           id: 'information-we-collect',
-          title: 'Information We Collect',
+          title: 'Toplanan Bilgiler',
           paragraphs: ['Evlio, uygulamanın temel özelliklerini sunmak, hesabınızı yönetmek, senkronizasyon sağlamak, uygulama kararlılığını artırmak, premium yetkilendirmeyi yönetmek ve destek taleplerini yanıtlamak için farklı veri kategorilerini işleyebilir.'],
         },
         {
           id: 'account-information',
-          title: 'Account Information',
+          title: 'Hesap Bilgileri',
           paragraphs: ['Hesap oluşturduğunuzda veya oturum açtığınızda ad, soyad, e-posta adresi, cinsiyet, hesap oluşturma tarihi ve son giriş tarihi gibi hesap bilgileri işlenebilir. Bu bilgiler kimlik doğrulama, hesap yönetimi, destek ve güvenlik amaçlarıyla kullanılabilir.'],
         },
         {
           id: 'user-generated-content',
-          title: 'User-Generated Content',
+          title: 'Kullanıcı Tarafından Oluşturulan İçerik',
           paragraphs: ['Uygulama içinde oluşturduğunuz çeyiz listeleri, alışveriş listeleri, yapılacaklar listeleri, notlar, mekanlar, balayı planları, tercihler ve diğer kullanıcı içerikleri Evlio özelliklerini sunmak için saklanabilir ve senkronize edilebilir.'],
         },
         {
           id: 'shared-workspace-data',
-          title: 'Shared Workspace Data',
+          title: 'Ortak Workspace Verileri',
           paragraphs: ['Ortak workspace kullandığınızda üyelik bilgileri, ortak listeler, davetler, erişim rolleri ve workspace içindeki kullanıcı içerikleri işlenebilir. Workspace üyeleri, paylaştığınız içerikleri uygulama özelliklerinin gerektirdiği ölçüde görebilir.'],
         },
         {
           id: 'automatically-collected-technical-data',
-          title: 'Automatically Collected Technical Data',
+          title: 'Otomatik Toplanan Teknik Veriler',
           paragraphs: ['Uygulama; crash kayıtları, analytics eventleri, cihaz bilgileri, uygulama sürümü, işletim sistemi bilgisi, reklam performans verileri ve satın alma ya da abonelik durumu gibi teknik verileri otomatik olarak işleyebilir.'],
         },
         { id: 'firebase-authentication', title: 'Firebase Authentication', paragraphs: ['Firebase Authentication hesap oluşturma, oturum açma, güvenli kimlik yönetimi ve kullanıcı hesabını doğru verilerle ilişkilendirmek için kullanılabilir.'] },
         { id: 'cloud-firestore', title: 'Cloud Firestore', paragraphs: ['Cloud Firestore; hesapla ilişkili uygulama verilerini, listeleri, workspace kayıtlarını, tercihleri ve senkronizasyon için gerekli kayıtları saklamak için kullanılabilir.'] },
-        { id: 'offline-storage-and-sync', title: 'Offline Storage and Sync', paragraphs: ['Evlio offline kullanım ve local storage mantığıyla tasarlanır. Bazı veriler cihazınızda yerel olarak saklanabilir ve internet bağlantısı geri geldiğinde Cloud Firestore ile senkronize edilebilir.'] },
+        { id: 'offline-storage-and-sync', title: 'Offline Depolama ve Senkronizasyon', paragraphs: ['Evlio offline kullanım ve local storage mantığıyla tasarlanır. Bazı veriler cihazınızda yerel olarak saklanabilir ve internet bağlantısı geri geldiğinde Cloud Firestore ile senkronize edilebilir.'] },
         { id: 'firebase-analytics', title: 'Firebase Analytics', paragraphs: ['Firebase Analytics, uygulama kullanımını, özellik etkileşimlerini ve ürün performansını anlamak için kullanılabilir. Bu veriler mümkün olduğunca toplulaştırılmış analizler için değerlendirilir.'] },
         { id: 'firebase-crashlytics', title: 'Firebase Crashlytics', paragraphs: ['Firebase Crashlytics; hata ve crash kayıtlarını, cihaz ve işletim sistemi bilgilerini, uygulama sürümünü ve tanılama olaylarını uygulama kararlılığını artırmak için işleyebilir.'] },
         { id: 'google-admob', title: 'Google AdMob', paragraphs: ['Google AdMob, desteklenen sürümlerde reklam göstermek ve reklam performansını ölçmek için kullanılabilir. Reklamla ilişkili veriler Google politikaları ve ilgili izin/tercih mekanizmaları kapsamında işlenebilir.'] },
-        { id: 'revenuecat-and-purchases', title: 'RevenueCat and Purchases', paragraphs: ['Premium özellikler ve entitlement sistemi RevenueCat üzerinden yönetilebilir. Kart bilgileriniz doğrudan Evlio tarafından saklanmaz; satın alma ve abonelik süreçleri App Store, Google Play ve RevenueCat üzerinden yürütülür. RevenueCat abonelik durumu ve yetkilendirme bilgilerini işleyebilir.'] },
-        { id: 'admin-panel-access', title: 'Admin Panel Access', paragraphs: ['Evlio yönetimi için kullanılan admin panel, destek, güvenlik, hata inceleme ve operasyonel ihtiyaçlar kapsamında sınırlı yetkili kişiler tarafından erişilebilir verileri gösterebilir. Bu erişim makul ölçüde sınırlandırılır.'] },
-        { id: 'how-we-use-data', title: 'How We Use Data', paragraphs: ['Veriler; uygulama özelliklerini sunmak, hesabınızı yönetmek, listeleri ve workspace verilerini senkronize etmek, premium erişimi doğrulamak, reklam ve analiz süreçlerini yürütmek, hataları gidermek, güvenliği sağlamak ve destek taleplerini yanıtlamak için kullanılabilir.'] },
-        { id: 'legal-basis', title: 'Legal Basis / KVKK and GDPR Principles', paragraphs: ['Veri işleme faaliyetleri; sözleşmenin kurulması veya ifası, açık rıza, meşru menfaat, hukuki yükümlülükler ve ürün güvenliği gibi KVKK ve GDPR ilkeleriyle uyumlu olabilecek dayanaklara göre değerlendirilebilir. Gerektiğinde izin veya tercih mekanizmaları sunulabilir.'] },
-        { id: 'data-retention', title: 'Data Retention', paragraphs: ['Veriler, hizmeti sunmak ve yukarıdaki amaçları yerine getirmek için gerekli olduğu sürece saklanabilir. Hesap silme sonrasında bazı sınırlı kayıtlar yasal, güvenlik, finansal kayıt, store transaction veya kötüye kullanım önleme gereklilikleri kapsamında tutulabilir.'] },
-        { id: 'data-security', title: 'Data Security', paragraphs: ['Evlio, kullanıcı verilerini korumak için güvenilir altyapı sağlayıcıları ve makul teknik/organizasyonel önlemler kullanacak şekilde tasarlanır. Hiçbir çevrimiçi servis mutlak güvenlik garantisi veremez.'] },
-        { id: 'account-and-data-deletion', title: 'Account and Data Deletion', paragraphs: ['Hesap ve veri silme talimatları Evlio Hesap Silme sayfasında açıklanmıştır. Uygulama içinden silme adımları tamamlanabilir veya support@varolapps.com adresine talep gönderilebilir.'] },
-        { id: 'childrens-privacy', title: "Children's Privacy", paragraphs: ['Evlio, yürürlükteki hukuk kapsamında ebeveyn izni olmadan dijital servis kullanması uygun olmayan çocuklara yönelik değildir. Bir çocuğun kişisel bilgi sağladığını düşünüyorsanız bizimle iletişime geçin.'] },
-        { id: 'international-services', title: 'International Services and Third-Party Providers', paragraphs: ['Firebase, Google AdMob, RevenueCat, Expo, App Store ve Google Play gibi servisler farklı ülkelerdeki altyapıları kullanabilir. Bu sağlayıcıların kendi gizlilik ve güvenlik uygulamaları geçerli olabilir.'] },
-        { id: 'changes-to-this-policy', title: 'Changes to This Policy', paragraphs: ['Evlio geliştikçe veya kullanılan servisler değiştikçe bu politika güncellenebilir. Güncel sürüm bu sayfada yayınlanır.'] },
-        { id: 'contact', title: 'Contact', paragraphs: [`Evlio gizlilik soruları için ${supportEmail} adresinden iletişime geçebilirsiniz.`] },
+        { id: 'revenuecat-and-purchases', title: 'RevenueCat ve Satın Almalar', paragraphs: ['Premium özellikler ve entitlement sistemi RevenueCat üzerinden yönetilebilir. Kart bilgileriniz doğrudan Evlio tarafından saklanmaz; satın alma ve abonelik süreçleri App Store, Google Play ve RevenueCat üzerinden yürütülür. RevenueCat abonelik durumu ve yetkilendirme bilgilerini işleyebilir.'] },
+        { id: 'admin-panel-access', title: 'Admin Panel Erişimi', paragraphs: ['Evlio yönetimi için kullanılan admin panel, destek, güvenlik, hata inceleme ve operasyonel ihtiyaçlar kapsamında sınırlı yetkili kişiler tarafından erişilebilir verileri gösterebilir. Bu erişim makul ölçüde sınırlandırılır.'] },
+        { id: 'how-we-use-data', title: 'Verileri Nasıl Kullanırız', paragraphs: ['Veriler; uygulama özelliklerini sunmak, hesabınızı yönetmek, listeleri ve workspace verilerini senkronize etmek, premium erişimi doğrulamak, reklam ve analiz süreçlerini yürütmek, hataları gidermek, güvenliği sağlamak ve destek taleplerini yanıtlamak için kullanılabilir.'] },
+        { id: 'legal-basis', title: 'Hukuki Dayanak / KVKK ve GDPR İlkeleri', paragraphs: ['Veri işleme faaliyetleri; sözleşmenin kurulması veya ifası, açık rıza, meşru menfaat, hukuki yükümlülükler ve ürün güvenliği gibi KVKK ve GDPR ilkeleriyle uyumlu olabilecek dayanaklara göre değerlendirilebilir. Gerektiğinde izin veya tercih mekanizmaları sunulabilir.'] },
+        { id: 'data-retention', title: 'Veri Saklama', paragraphs: ['Veriler, hizmeti sunmak ve yukarıdaki amaçları yerine getirmek için gerekli olduğu sürece saklanabilir. Hesap silme sonrasında bazı sınırlı kayıtlar yasal, güvenlik, finansal kayıt, store transaction veya kötüye kullanım önleme gereklilikleri kapsamında tutulabilir.'] },
+        { id: 'data-security', title: 'Veri Güvenliği', paragraphs: ['Evlio, kullanıcı verilerini korumak için güvenilir altyapı sağlayıcıları ve makul teknik/organizasyonel önlemler kullanacak şekilde tasarlanır. Hiçbir çevrimiçi servis mutlak güvenlik garantisi veremez.'] },
+        { id: 'account-and-data-deletion', title: 'Hesap ve Veri Silme', paragraphs: ['Hesap ve veri silme talimatları Evlio Hesap Silme sayfasında açıklanmıştır. Uygulama içinden silme adımları tamamlanabilir veya support@varolapps.com adresine talep gönderilebilir.'] },
+        { id: 'childrens-privacy', title: 'Çocukların Gizliliği', paragraphs: ['Evlio, yürürlükteki hukuk kapsamında ebeveyn izni olmadan dijital servis kullanması uygun olmayan çocuklara yönelik değildir. Bir çocuğun kişisel bilgi sağladığını düşünüyorsanız bizimle iletişime geçin.'] },
+        { id: 'international-services', title: 'Uluslararası Servisler ve Üçüncü Taraf Sağlayıcılar', paragraphs: ['Firebase, Google AdMob, RevenueCat, Expo, App Store ve Google Play gibi servisler farklı ülkelerdeki altyapıları kullanabilir. Bu sağlayıcıların kendi gizlilik ve güvenlik uygulamaları geçerli olabilir.'] },
+        { id: 'changes-to-this-policy', title: 'Bu Politikadaki Değişiklikler', paragraphs: ['Evlio geliştikçe veya kullanılan servisler değiştikçe bu politika güncellenebilir. Güncel sürüm bu sayfada yayınlanır.'] },
+        { id: 'contact', title: 'İletişim', paragraphs: [`Evlio gizlilik soruları için ${supportEmail} adresinden iletişime geçebilirsiniz.`] },
       ],
     },
     evlioTerms: {
@@ -229,28 +232,28 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Evlio kullanım şartlarını; hesaplar, ortak workspace, kullanıcı içerikleri, premium özellikler, ödemeler, reklamlar ve hizmet değişiklikleri için inceleyin.',
       ogTitle: 'Evlio Kullanım Şartları',
       ogDescription: 'Evlio hesapları, premium özellikler, reklamlar, ortak workspace ve kabul edilebilir kullanım şartları.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
-        { id: 'introduction', title: 'Introduction', paragraphs: ['Bu Kullanım Şartları, Evlio mobil uygulamasını kullanımınız için geçerlidir. Uygulamayı kullanarak bu şartları kabul etmiş sayılırsınız.'] },
-        { id: 'description-of-service', title: 'Description of Service', paragraphs: ['Evlio; çeyiz, alışveriş, yapılacaklar, notlar, mekanlar, balayı planları ve ortak workspace verilerini düzenlemeye yardımcı olan bir mobil planlama aracıdır.'] },
-        { id: 'user-accounts', title: 'User Accounts', paragraphs: ['Bazı özellikler hesap oluşturmanızı gerektirebilir. Sağladığınız hesap bilgilerinin doğru ve güncel olmasından siz sorumlusunuz.'] },
-        { id: 'account-security', title: 'Account Security', paragraphs: ['Hesap erişiminizi ve cihaz güvenliğinizi korumak sizin sorumluluğunuzdadır. Yetkisiz kullanım şüphesi olduğunda destek ekibiyle iletişime geçebilirsiniz.'] },
-        { id: 'user-responsibilities', title: 'User Responsibilities', paragraphs: ['Evlio’ya eklediğiniz içeriklerden, listelerden, notlardan ve paylaştığınız workspace bilgilerinden siz sorumlusunuz. Hassas bilgileri paylaşmadan önce dikkatli olmanız önerilir.'] },
-        { id: 'shared-workspace', title: 'Shared Workspace', paragraphs: ['Ortak workspace özelliği, davet ettiğiniz kişilerle hazırlık verilerini birlikte yönetmenizi sağlar. Workspace üyeleri paylaşılan içerikleri görebilir, düzenleyebilir veya etkileşim kurabilir.'] },
-        { id: 'user-generated-content', title: 'User-Generated Content', paragraphs: ['Kullanıcı tarafından oluşturulan içerik size aittir; ancak uygulama özelliklerini sunabilmek için bu içerik Evlio sistemlerinde saklanabilir, işlenebilir ve senkronize edilebilir.'] },
-        { id: 'premium-features', title: 'Premium Features', paragraphs: ['Evlio bazı gelişmiş özellikleri premium erişimle sunabilir. Premium kapsamı, kullanılabilirliği ve özellikleri zaman içinde değişebilir.'] },
-        { id: 'subscriptions-and-payments', title: 'Subscriptions and Payments', paragraphs: ['Abonelikler ve satın almalar App Store, Google Play ve RevenueCat üzerinden yönetilebilir. Faturalama, iptal, yenileme ve iade süreçleri ilgili mağaza politikalarına tabidir.'] },
-        { id: 'ads', title: 'Ads', paragraphs: ['Evlio’nun bazı sürümlerinde Google AdMob aracılığıyla reklam gösterilebilir. Premium seçenekler veya uygulama içi ayarlar reklam deneyimini etkileyebilir.'] },
-        { id: 'acceptable-use', title: 'Acceptable Use', paragraphs: ['Uygulamayı kötüye kullanmamak, yetkisiz erişim denememek, hizmeti bozacak davranışlarda bulunmamak ve hukuka aykırı içerik eklememekle yükümlüsünüz.'] },
-        { id: 'intellectual-property', title: 'Intellectual Property', paragraphs: ['Evlio’nun yazılımı, tasarımı, marka öğeleri ve ürün materyalleri Varol Apps’e veya lisans verenlerine aittir.'] },
-        { id: 'service-changes', title: 'Service Changes', paragraphs: ['Evlio özellikleri, tasarımı, premium kapsamı, reklam yapısı veya teknik altyapısı ürün geliştirme sürecinde değiştirilebilir.'] },
-        { id: 'availability', title: 'Availability', paragraphs: ['Evlio mevcut haliyle ve erişilebilir olduğu ölçüde sunulur. Bakım, teknik sorunlar, store süreçleri veya üçüncü taraf servisler nedeniyle kesinti yaşanabilir.'] },
-        { id: 'account-termination', title: 'Account Termination', paragraphs: ['Kullanım şartlarının ihlali, güvenlik riski veya kötüye kullanım durumlarında hesap erişimi sınırlandırılabilir veya sonlandırılabilir.'] },
-        { id: 'disclaimer', title: 'Disclaimer', paragraphs: ['Evlio bir planlama ve organizasyon aracıdır; hukuki, finansal, profesyonel veya etkinlik yönetimi danışmanlığı sağlamaz.'] },
-        { id: 'limitation-of-liability', title: 'Limitation of Liability', paragraphs: ['Yürürlükteki hukukun izin verdiği ölçüde Varol Apps, Evlio kullanımından doğabilecek dolaylı, arızi veya sonuçsal zararlardan sorumlu değildir.'] },
-        { id: 'changes-to-terms', title: 'Changes to Terms', paragraphs: ['Bu şartlar ürün, hukuki gereklilikler veya üçüncü taraf servislerdeki değişikliklere göre güncellenebilir. Güncel sürüm bu sayfada yayınlanır.'] },
-        { id: 'contact', title: 'Contact', paragraphs: [`Evlio şartlarıyla ilgili sorularınızı ${supportEmail} adresine gönderebilirsiniz.`] },
+        { id: 'introduction', title: 'Giriş', paragraphs: ['Bu Kullanım Şartları, Evlio mobil uygulamasını kullanımınız için geçerlidir. Uygulamayı kullanarak bu şartları kabul etmiş sayılırsınız.'] },
+        { id: 'description-of-service', title: 'Hizmetin Tanımı', paragraphs: ['Evlio; çeyiz, alışveriş, yapılacaklar, notlar, mekanlar, balayı planları ve ortak workspace verilerini düzenlemeye yardımcı olan bir mobil planlama aracıdır.'] },
+        { id: 'user-accounts', title: 'Kullanıcı Hesapları', paragraphs: ['Bazı özellikler hesap oluşturmanızı gerektirebilir. Sağladığınız hesap bilgilerinin doğru ve güncel olmasından siz sorumlusunuz.'] },
+        { id: 'account-security', title: 'Hesap Güvenliği', paragraphs: ['Hesap erişiminizi ve cihaz güvenliğinizi korumak sizin sorumluluğunuzdadır. Yetkisiz kullanım şüphesi olduğunda destek ekibiyle iletişime geçebilirsiniz.'] },
+        { id: 'user-responsibilities', title: 'Kullanıcı Sorumlulukları', paragraphs: ['Evlio’ya eklediğiniz içeriklerden, listelerden, notlardan ve paylaştığınız workspace bilgilerinden siz sorumlusunuz. Hassas bilgileri paylaşmadan önce dikkatli olmanız önerilir.'] },
+        { id: 'shared-workspace', title: 'Ortak Workspace', paragraphs: ['Ortak workspace özelliği, davet ettiğiniz kişilerle hazırlık verilerini birlikte yönetmenizi sağlar. Workspace üyeleri paylaşılan içerikleri görebilir, düzenleyebilir veya etkileşim kurabilir.'] },
+        { id: 'user-generated-content', title: 'Kullanıcı Tarafından Oluşturulan İçerik', paragraphs: ['Kullanıcı tarafından oluşturulan içerik size aittir; ancak uygulama özelliklerini sunabilmek için bu içerik Evlio sistemlerinde saklanabilir, işlenebilir ve senkronize edilebilir.'] },
+        { id: 'premium-features', title: 'Premium Özellikler', paragraphs: ['Evlio bazı gelişmiş özellikleri premium erişimle sunabilir. Premium kapsamı, kullanılabilirliği ve özellikleri zaman içinde değişebilir.'] },
+        { id: 'subscriptions-and-payments', title: 'Abonelikler ve Ödemeler', paragraphs: ['Abonelikler ve satın almalar App Store, Google Play ve RevenueCat üzerinden yönetilebilir. Faturalama, iptal, yenileme ve iade süreçleri ilgili mağaza politikalarına tabidir.'] },
+        { id: 'ads', title: 'Reklamlar', paragraphs: ['Evlio’nun bazı sürümlerinde Google AdMob aracılığıyla reklam gösterilebilir. Premium seçenekler veya uygulama içi ayarlar reklam deneyimini etkileyebilir.'] },
+        { id: 'acceptable-use', title: 'Kabul Edilebilir Kullanım', paragraphs: ['Uygulamayı kötüye kullanmamak, yetkisiz erişim denememek, hizmeti bozacak davranışlarda bulunmamak ve hukuka aykırı içerik eklememekle yükümlüsünüz.'] },
+        { id: 'intellectual-property', title: 'Fikri Mülkiyet', paragraphs: ['Evlio’nun yazılımı, tasarımı, marka öğeleri ve ürün materyalleri Varol Apps’e veya lisans verenlerine aittir.'] },
+        { id: 'service-changes', title: 'Hizmet Değişiklikleri', paragraphs: ['Evlio özellikleri, tasarımı, premium kapsamı, reklam yapısı veya teknik altyapısı ürün geliştirme sürecinde değiştirilebilir.'] },
+        { id: 'availability', title: 'Erişilebilirlik', paragraphs: ['Evlio mevcut haliyle ve erişilebilir olduğu ölçüde sunulur. Bakım, teknik sorunlar, store süreçleri veya üçüncü taraf servisler nedeniyle kesinti yaşanabilir.'] },
+        { id: 'account-termination', title: 'Hesap Sonlandırma', paragraphs: ['Kullanım şartlarının ihlali, güvenlik riski veya kötüye kullanım durumlarında hesap erişimi sınırlandırılabilir veya sonlandırılabilir.'] },
+        { id: 'disclaimer', title: 'Sorumluluk Reddi', paragraphs: ['Evlio bir planlama ve organizasyon aracıdır; hukuki, finansal, profesyonel veya etkinlik yönetimi danışmanlığı sağlamaz.'] },
+        { id: 'limitation-of-liability', title: 'Sorumluluğun Sınırlandırılması', paragraphs: ['Yürürlükteki hukukun izin verdiği ölçüde Varol Apps, Evlio kullanımından doğabilecek dolaylı, arızi veya sonuçsal zararlardan sorumlu değildir.'] },
+        { id: 'changes-to-terms', title: 'Şartlardaki Değişiklikler', paragraphs: ['Bu şartlar ürün, hukuki gereklilikler veya üçüncü taraf servislerdeki değişikliklere göre güncellenebilir. Güncel sürüm bu sayfada yayınlanır.'] },
+        { id: 'contact', title: 'İletişim', paragraphs: [`Evlio şartlarıyla ilgili sorularınızı ${supportEmail} adresine gönderebilirsiniz.`] },
       ],
     },
     evlioSupport: {
@@ -262,7 +265,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Evlio destek ekibiyle iletişime geçin; premium, offline kullanım, ortak workspace, veri güvenliği ve hesap silme hakkında yanıtlar bulun.',
       ogTitle: 'Evlio Destek',
       ogDescription: 'Evlio mobil uygulaması için destek kaynakları ve sık sorulan sorular.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
         {
@@ -304,7 +307,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Evlio hesabınızı uygulama içinden veya destek talebiyle nasıl silebileceğinizi ve hangi verilerin silineceğini öğrenin.',
       ogTitle: 'Evlio Hesabınızı Silin',
       ogDescription: 'Evlio kullanıcıları için Google Play hesap silme bilgileri.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
         {
@@ -313,11 +316,11 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
           paragraphs: ['Evlio hesabınızı uygulama içinden silmek için şu adımları izleyin:'],
           bullets: ['Evlio uygulamasını açın.', 'Ayarlar ekranına gidin.', 'Hesap bölümünü açın.', 'Hesabı Sil seçeneğine dokunun.', 'Onay adımlarını tamamlayın.'],
         },
-        { id: 'alternative-request', title: 'Web/mail ile talep', paragraphs: [`Uygulamaya erişemiyorsanız ${supportEmail} adresine hesap silme talebi gönderebilirsiniz. Talepte hesabınıza bağlı e-posta adresini belirtmeniz gerekir.`] },
-        { id: 'deleted-data', title: 'Silinecek veriler', bullets: ['Account', 'Profile', 'Workspace membership', 'Lists', 'Notes', 'Places', 'Honeymoon plans', 'User preferences', 'User-generated content'] },
+        { id: 'alternative-request', title: 'Web veya e-posta ile talep', paragraphs: [`Uygulamaya erişemiyorsanız ${supportEmail} adresine hesap silme talebi gönderebilirsiniz. Talepte hesabınıza bağlı e-posta adresini belirtmeniz gerekir.`] },
+        { id: 'deleted-data', title: 'Silinecek veriler', bullets: ['Hesap', 'Profil', 'Workspace üyeliği', 'Listeler', 'Notlar', 'Mekanlar', 'Balayı planları', 'Kullanıcı tercihleri', 'Kullanıcı tarafından oluşturulan içerik'] },
         { id: 'retained-data', title: 'Saklanabilecek veriler', paragraphs: ['Güvenlik kayıtları, crash/analytics kayıtlarının anonim veya toplulaştırılmış halleri, yasal, finansal veya store transaction kayıtları ile fraud prevention veya abuse prevention için gerekli sınırlı kayıtlar tutulabilir.'] },
         { id: 'processing-time', title: 'İşlem süresi', paragraphs: ['Doğrulanan hesap silme talepleri makul süre içinde, genellikle 30 gün içinde işleme alınır. Silme tamamlandıktan sonra bazı verilerin geri getirilememesi mümkündür.'] },
-        { id: 'contact', title: 'Contact', paragraphs: [`Hesap silme soruları için ${supportEmail} adresinden iletişime geçebilirsiniz.`] },
+        { id: 'contact', title: 'İletişim', paragraphs: [`Hesap silme soruları için ${supportEmail} adresinden iletişime geçebilirsiniz.`] },
       ],
     },
     evlioFaq: {
@@ -329,7 +332,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Evlio hakkında sık sorulan sorular: yayın tarihi, ücretsiz kullanım, premium, ortak workspace, offline sync, reklamlar, veri güvenliği ve hesap silme.',
       ogTitle: 'Evlio Sık Sorulan Sorular',
       ogDescription: 'Evlio mobil uygulaması için kapsamlı SSS sayfası.',
-      updatedAt,
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
         {
@@ -355,22 +358,22 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
     },
     evlioCookies: {
       eyebrow: 'Evlio',
-      title: 'Cookie Policy',
+      title: 'Çerez Politikası',
       description: 'Varol Apps web sitesi ve Evlio web sayfaları için çerez kullanımı hakkında bilgi.',
       routeKey: 'evlioCookies',
-      seoTitle: 'Evlio Cookie Policy',
+      seoTitle: 'Evlio Çerez Politikası',
       seoDescription: 'Varol Apps web sitesinin Evlio sayfalarında kullanılan veya ileride kullanılabilecek çerez ve analiz teknolojileri hakkında bilgi.',
-      ogTitle: 'Evlio Cookie Policy',
-      ogDescription: 'Evlio web sayfaları için website cookie policy.',
-      updatedAt,
+      ogTitle: 'Evlio Çerez Politikası',
+      ogDescription: 'Evlio web sayfaları için website çerez politikası.',
+      updatedAt: updatedAt.tr,
       contactEmail: supportEmail,
       sections: [
-        { id: 'website-cookies', title: 'Website cookies açıklaması', paragraphs: ['Bu Cookie Policy Evlio mobil uygulaması için değil, Varol Apps web sitesindeki Evlio sayfaları için geçerlidir.'] },
-        { id: 'essential-cookies', title: 'Essential cookies', paragraphs: ['Web sitesinin temel çalışması için gerekli teknik çerezler veya benzer depolama mekanizmaları kullanılabilir.'] },
-        { id: 'analytics-cookies', title: 'Analytics cookies', paragraphs: ['Varol Apps website currently does not use non-essential cookies. İleride analytics veya performans ölçüm araçları eklenirse bu politika güncellenecektir.'] },
-        { id: 'third-party-services', title: 'Third-party services', paragraphs: ['Cloudflare Pages veya benzeri barındırma altyapıları, güvenlik ve trafik yönetimi için teknik veriler işleyebilir.'] },
-        { id: 'cookie-preferences', title: 'Cookie tercihleri', paragraphs: ['Şu anda web sitesinde kullanıcı tarafından yönetilmesi gereken non-essential cookie tercihi bulunmamaktadır. İleride tercih paneli gerekirse bu sayfa güncellenecektir.'] },
-        { id: 'contact', title: 'Contact', paragraphs: [`Cookie policy soruları için ${supportEmail} adresinden iletişime geçebilirsiniz.`] },
+        { id: 'website-cookies', title: 'Web sitesi çerezleri', paragraphs: ['Bu Çerez Politikası Evlio mobil uygulaması için değil, Varol Apps web sitesindeki Evlio sayfaları için geçerlidir.'] },
+        { id: 'essential-cookies', title: 'Zorunlu çerezler', paragraphs: ['Web sitesinin temel çalışması için gerekli teknik çerezler veya benzer depolama mekanizmaları kullanılabilir.'] },
+        { id: 'analytics-cookies', title: 'Analitik çerezleri', paragraphs: ['Varol Apps web sitesi şu anda zorunlu olmayan çerezler kullanmamaktadır. İleride analytics veya performans ölçüm araçları eklenirse bu politika güncellenecektir.'] },
+        { id: 'third-party-services', title: 'Üçüncü taraf servisler', paragraphs: ['Cloudflare Pages veya benzeri barındırma altyapıları, güvenlik ve trafik yönetimi için teknik veriler işleyebilir.'] },
+        { id: 'cookie-preferences', title: 'Çerez tercihleri', paragraphs: ['Şu anda web sitesinde kullanıcı tarafından yönetilmesi gereken zorunlu olmayan çerez tercihi bulunmamaktadır. İleride tercih paneli gerekirse bu sayfa güncellenecektir.'] },
+        { id: 'contact', title: 'İletişim', paragraphs: [`Çerez politikası soruları için ${supportEmail} adresinden iletişime geçebilirsiniz.`] },
       ],
     },
   },
@@ -382,7 +385,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       routeKey: 'privacy',
       seoTitle: 'Privacy Policy',
       seoDescription: 'Read the Varol Apps privacy policy for company-level information collection, third-party services, and contact details.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         { id: 'company-overview', title: 'Company overview', paragraphs: ['Varol Apps is an independent mobile app studio that builds simple and useful digital products. This policy explains the general privacy approach for Varol Apps websites and company-level services.', 'Individual apps may have product-specific privacy policies that describe app features, data providers, analytics, purchases, and account behavior in more detail.'] },
@@ -393,12 +396,12 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
     },
     generalTerms: {
       eyebrow: 'Varol Apps',
-      title: 'Terms of Service',
+      title: 'Terms of Use',
       description: 'General terms for using Varol Apps websites, services, and product information pages.',
       routeKey: 'terms',
-      seoTitle: 'Terms of Service',
+      seoTitle: 'Terms of Use',
       seoDescription: 'Review the general Varol Apps terms covering usage, intellectual property, liability, and contact information.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         { id: 'general-usage', title: 'General usage', paragraphs: ['By using Varol Apps websites or services, you agree to use them responsibly and only for lawful purposes.', 'Specific mobile applications may include additional terms that apply to accounts, subscriptions, purchases, shared workspaces, or app-specific functionality.'] },
@@ -414,7 +417,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       routeKey: 'support',
       seoTitle: 'Support',
       seoDescription: 'Contact Varol Apps support and find support links for current and upcoming apps.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         { id: 'general-support', title: 'General support', paragraphs: ['For general questions about Varol Apps or its products, contact support by email. Please include the app name, your device model, operating system version, and a short description of the issue when relevant.'] },
@@ -438,7 +441,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       routeKey: 'deleteAccount',
       seoTitle: 'Delete Account',
       seoDescription: 'Find app-specific account deletion instructions for Varol Apps products.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         { id: 'overview', title: 'General information', paragraphs: ['Account deletion is handled by each application because account data, storage providers, and product features can differ by app.', 'Choose the relevant app below to review the account deletion steps and the types of data deleted or retained.'] },
@@ -455,7 +458,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Learn how Evlio handles account data, user-generated content, Firebase, AdMob, RevenueCat, offline sync, admin panel access, and account deletion.',
       ogTitle: 'Evlio Privacy Policy',
       ogDescription: 'Privacy information for Evlio data collection, third-party services, purchases, security, and account deletion.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         { id: 'introduction', title: 'Introduction', paragraphs: ['This Privacy Policy explains what information may be processed when you use the Evlio mobile application and how that information may be used.', 'Evlio is a mobile planning app for wedding preparation, trousseau, shopping, tasks, notes, places, honeymoon plans, and shared workspaces. This policy is informational and does not constitute legal advice.'] },
@@ -488,14 +491,14 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       title: 'Terms of Service',
       description: 'Terms for using the Evlio mobile application.',
       routeKey: 'evlioTerms',
-      seoTitle: 'Evlio Terms of Service',
+      seoTitle: 'Evlio Terms of Use',
       seoDescription: 'Review Evlio terms covering accounts, shared workspaces, user content, premium features, payments, ads, acceptable use, and service changes.',
-      ogTitle: 'Evlio Terms of Service',
+      ogTitle: 'Evlio Terms of Use',
       ogDescription: 'Terms for Evlio accounts, purchases, premium features, shared workspaces, and acceptable use.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
-        { id: 'introduction', title: 'Introduction', paragraphs: ['These Terms of Service apply to your use of the Evlio mobile application. By using Evlio, you agree to these terms.'] },
+        { id: 'introduction', title: 'Introduction', paragraphs: ['These Terms of Use apply to your use of the Evlio mobile application. By using Evlio, you agree to these terms.'] },
         { id: 'description-of-service', title: 'Description of Service', paragraphs: ['Evlio helps users organize trousseau lists, shopping lists, tasks, notes, places, honeymoon plans, and shared workspace data for wedding preparation.'] },
         { id: 'user-accounts', title: 'User Accounts', paragraphs: ['Some features may require an account. You are responsible for providing accurate and up-to-date account information.'] },
         { id: 'account-security', title: 'Account Security', paragraphs: ['You are responsible for keeping your account and device access secure. If you suspect unauthorized access, contact support.'] },
@@ -525,7 +528,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Contact Evlio support and find answers about premium, offline use, shared workspaces, data safety, and account deletion.',
       ogTitle: 'Evlio Support',
       ogDescription: 'Support resources and FAQs for the Evlio mobile app.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         {
@@ -567,7 +570,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Learn how to delete your Evlio account from the app or by contacting support, including what data is deleted and what may be retained.',
       ogTitle: 'Delete your Evlio Account',
       ogDescription: 'Google Play account deletion information for Evlio users.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         { id: 'in-app-steps', title: 'Delete your account in the app', paragraphs: ['You can request account deletion directly from inside Evlio by following these steps:'], bullets: ['Open Evlio.', 'Go to Settings.', 'Open Account.', 'Tap Delete Account.', 'Complete the confirmation steps.'] },
@@ -587,7 +590,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Frequently asked questions about Evlio: release timing, free use, premium, shared workspace, offline sync, ads, data safety, and account deletion.',
       ogTitle: 'Evlio FAQ',
       ogDescription: 'Comprehensive FAQ for the Evlio mobile app.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         {
@@ -620,7 +623,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
       seoDescription: 'Learn about cookies and similar technologies on the Varol Apps website and Evlio web pages.',
       ogTitle: 'Evlio Cookie Policy',
       ogDescription: 'Website cookie policy for Evlio web pages.',
-      updatedAt,
+      updatedAt: updatedAt.en,
       contactEmail: supportEmail,
       sections: [
         { id: 'website-cookies', title: 'Website cookies', paragraphs: ['This Cookie Policy applies to Evlio pages on the Varol Apps website. It does not apply to the Evlio mobile app itself.'] },

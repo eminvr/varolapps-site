@@ -174,5 +174,16 @@ export const en: typeof tr = {
       support: 'Get Support',
       deleteAccount: 'Account Deletion Info',
     },
+    trust: {
+      title: 'Trust and support',
+      description: 'Find privacy, terms, support and account deletion information for Evlio.',
+      links: {
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Use',
+        support: 'Support',
+        deleteAccount: 'Delete Account',
+        faq: 'FAQ',
+      },
+    },
   },
 }

@@ -5,6 +5,7 @@ import { EvlioFeatures } from '../components/evlio/EvlioFeatures'
 import { EvlioHero } from '../components/evlio/EvlioHero'
 import { EvlioHowItWorks } from '../components/evlio/EvlioHowItWorks'
 import { EvlioScreenshots } from '../components/evlio/EvlioScreenshots'
+import { EvlioTrustLinks } from '../components/evlio/EvlioTrustLinks'
 import { alternateUrls, canonicalUrl, localizedRoutes } from '../i18n/routes'
 import { useLocale } from '../i18n/useLocale'
 
@@ -27,6 +28,7 @@ export function EvlioPage() {
       <EvlioHowItWorks />
       <EvlioScreenshots />
       <EvlioFaq />
+      <EvlioTrustLinks />
       <EvlioCta />
     </>
   )

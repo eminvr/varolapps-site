@@ -1,76 +1,69 @@
-# React + TypeScript + Vite
+# Varol Apps Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Static marketing, product, support, and legal website for Varol Apps and Evlio.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Vite
+- React
+- TypeScript
+- Tailwind CSS v4
+- React Router
+- npm
 
-## React Compiler
+## Local Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Default local URL:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+http://127.0.0.1:5173/
 ```
-# varolapps-site
+
+## Build
+
+```bash
+npm run build
+```
+
+The production output is generated in `dist/`.
+
+## Quality Checks
+
+```bash
+npm run lint
+```
+
+## Deploy
+
+The site is designed for Cloudflare Pages as a static SPA.
+
+Cloudflare Pages settings:
+
+- Framework preset: `Vite`
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: `varolapps-site`
+- Node.js: use the Cloudflare default supported Node version or a current LTS version
+
+SPA fallback is handled by `public/_redirects`.
+
+## Languages
+
+- Turkish is the default language and uses prefixless URLs.
+- English uses the `/en` prefix.
+- Canonical Evlio URLs use the short `/evlio/...` route family.
+- Legacy `/apps/evlio/...` routes remain available as aliases.
+
+## Store URL List
+
+- Privacy: https://varolapps.com/evlio/privacy
+- Support: https://varolapps.com/evlio/support
+- Terms: https://varolapps.com/evlio/terms
+- Delete Account: https://varolapps.com/evlio/delete-account
+- FAQ: https://varolapps.com/evlio/faq
+- Cookies: https://varolapps.com/evlio/cookies
