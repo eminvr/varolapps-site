@@ -7,7 +7,7 @@ export const apps: AppInfo[] = [
     name: 'Evlio',
     slug: 'evlio',
     path: routePaths.evlio,
-    description: 'A Varol Apps product page placeholder for the first iteration.',
+    description: 'Evlilik hazırlığı sürecindeki listeleri, alışverişleri ve ortak planları düzenlemek için geliştirilen mobil uygulama.',
     status: 'coming-soon',
   },
 ]

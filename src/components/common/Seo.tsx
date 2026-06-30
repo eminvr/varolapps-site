@@ -51,7 +51,7 @@ export function Seo({
   ogImage = siteConfig.defaultOgImage,
 }: SeoProps) {
   useEffect(() => {
-    const pageTitle = `${title} | ${siteConfig.name}`
+    const pageTitle = title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`
     const canonicalUrl = absoluteUrl(canonical)
     const imageUrl = absoluteUrl(ogImage)
 
