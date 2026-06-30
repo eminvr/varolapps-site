@@ -3,11 +3,21 @@ import { siteConfig } from '../utils/site'
 
 export const localizedRoutes = {
   home: '/',
-  evlio: '/apps/evlio',
+  evlio: '/evlio',
   privacy: '/privacy',
   terms: '/terms',
   support: '/support',
   deleteAccount: '/delete-account',
+  evlioPrivacy: '/evlio/privacy',
+  evlioTerms: '/evlio/terms',
+  evlioSupport: '/evlio/support',
+  evlioDeleteAccount: '/evlio/delete-account',
+  evlioFaq: '/evlio/faq',
+  evlioCookies: '/evlio/cookies',
+} as const
+
+export const legacyLocalizedRoutes = {
+  evlio: '/apps/evlio',
   evlioPrivacy: '/apps/evlio/privacy',
   evlioTerms: '/apps/evlio/terms',
   evlioSupport: '/apps/evlio/support',
