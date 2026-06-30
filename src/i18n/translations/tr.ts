@@ -8,7 +8,7 @@ export const tr = {
       terms: 'Şartlar',
       deleteAccount: 'Hesap Silme',
     },
-    supportEmail: 'support@varolapps.com',
+    supportEmail: 'eminvrl78@gmail.com',
     lastUpdated: 'Son güncelleme',
     onThisPage: 'Bu sayfada',
     needHelp: 'Yardıma mı ihtiyacınız var?',

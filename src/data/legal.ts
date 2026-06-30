@@ -13,7 +13,7 @@ type LegalPageKey =
   | 'evlioFaq'
   | 'evlioCookies'
 
-const supportEmail = 'support@varolapps.com'
+const supportEmail = 'eminvrl78@gmail.com'
 const updatedAt = {
   tr: '30 Haziran 2026',
   en: 'June 30, 2026',
@@ -216,7 +216,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         { id: 'legal-basis', title: 'Hukuki Dayanak / KVKK ve GDPR İlkeleri', paragraphs: ['Veri işleme faaliyetleri; sözleşmenin kurulması veya ifası, açık rıza, meşru menfaat, hukuki yükümlülükler ve ürün güvenliği gibi KVKK ve GDPR ilkeleriyle uyumlu olabilecek dayanaklara göre değerlendirilebilir. Gerektiğinde izin veya tercih mekanizmaları sunulabilir.'] },
         { id: 'data-retention', title: 'Veri Saklama', paragraphs: ['Veriler, hizmeti sunmak ve yukarıdaki amaçları yerine getirmek için gerekli olduğu sürece saklanabilir. Hesap silme sonrasında bazı sınırlı kayıtlar yasal, güvenlik, finansal kayıt, store transaction veya kötüye kullanım önleme gereklilikleri kapsamında tutulabilir.'] },
         { id: 'data-security', title: 'Veri Güvenliği', paragraphs: ['Evlio, kullanıcı verilerini korumak için güvenilir altyapı sağlayıcıları ve makul teknik/organizasyonel önlemler kullanacak şekilde tasarlanır. Hiçbir çevrimiçi servis mutlak güvenlik garantisi veremez.'] },
-        { id: 'account-and-data-deletion', title: 'Hesap ve Veri Silme', paragraphs: ['Hesap ve veri silme talimatları Evlio Hesap Silme sayfasında açıklanmıştır. Uygulama içinden silme adımları tamamlanabilir veya support@varolapps.com adresine talep gönderilebilir.'] },
+        { id: 'account-and-data-deletion', title: 'Hesap ve Veri Silme', paragraphs: ['Hesap ve veri silme talimatları Evlio Hesap Silme sayfasında açıklanmıştır. Uygulama içinden silme adımları tamamlanabilir veya eminvrl78@gmail.com adresine talep gönderilebilir.'] },
         { id: 'childrens-privacy', title: 'Çocukların Gizliliği', paragraphs: ['Evlio, yürürlükteki hukuk kapsamında ebeveyn izni olmadan dijital servis kullanması uygun olmayan çocuklara yönelik değildir. Bir çocuğun kişisel bilgi sağladığını düşünüyorsanız bizimle iletişime geçin.'] },
         { id: 'international-services', title: 'Uluslararası Servisler ve Üçüncü Taraf Sağlayıcılar', paragraphs: ['Firebase, Google AdMob, RevenueCat, Expo, App Store ve Google Play gibi servisler farklı ülkelerdeki altyapıları kullanabilir. Bu sağlayıcıların kendi gizlilik ve güvenlik uygulamaları geçerli olabilir.'] },
         { id: 'changes-to-this-policy', title: 'Bu Politikadaki Değişiklikler', paragraphs: ['Evlio geliştikçe veya kullanılan servisler değiştikçe bu politika güncellenebilir. Güncel sürüm bu sayfada yayınlanır.'] },
@@ -291,7 +291,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
             { question: 'Ortak workspace nedir?', answer: 'Ortak workspace, çiftlerin aynı hazırlık alanında listeleri ve yapılacakları birlikte takip edebilmesini hedefleyen alandır.' },
             { question: 'Offline çalışır mı?', answer: 'Evet. Evlio offline kullanım ve senkronizasyon mantığıyla geliştirilmiştir.' },
             { question: 'Verilerim güvende mi?', answer: 'Evlio, güvenilir altyapı sağlayıcıları ve makul teknik önlemler kullanacak şekilde tasarlanır. Hiçbir dijital servis mutlak güvenlik garantisi veremez.' },
-            { question: 'Hesabımı nasıl silebilirim?', answer: 'Hesap silme adımları Evlio Hesap Silme sayfasında açıklanmıştır. Alternatif olarak support@varolapps.com adresine talep gönderebilirsiniz.' },
+            { question: 'Hesabımı nasıl silebilirim?', answer: 'Hesap silme adımları Evlio Hesap Silme sayfasında açıklanmıştır. Alternatif olarak eminvrl78@gmail.com adresine talep gönderebilirsiniz.' },
             { question: 'Reklamları kaldırmak mümkün mü?', answer: 'Premium seçenekler reklam deneyimini etkileyebilir. Detaylar uygulama yayınlandığında uygulama içinde açıklanacaktır.' },
             { question: 'Hata bildirimi nasıl yaparım?', answer: `Hata bildirimi için ${supportEmail} adresine cihaz, işletim sistemi ve uygulama sürümü bilgileriyle birlikte yazabilirsiniz.` },
           ],
@@ -350,7 +350,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
             { question: 'Reklam gösterilecek mi?', answer: 'Evlio’nun bazı sürümlerinde Google AdMob aracılığıyla reklam gösterilebilir.' },
             { question: 'Reklamları kaldırmak mümkün mü?', answer: 'Premium seçenekler reklam deneyimini etkileyebilir. Detaylar uygulama içinde açıklanacaktır.' },
             { question: 'Verilerim güvende mi?', answer: 'Evlio güvenilir altyapı sağlayıcıları ve makul teknik önlemler kullanacak şekilde tasarlanır; hiçbir dijital servis mutlak güvenlik garantisi veremez.' },
-            { question: 'Hesabımı nasıl silebilirim?', answer: 'Ayarlar > Hesap > Hesabı Sil adımlarını izleyebilir veya support@varolapps.com adresine talep gönderebilirsiniz.' },
+            { question: 'Hesabımı nasıl silebilirim?', answer: 'Ayarlar > Hesap > Hesabı Sil adımlarını izleyebilir veya eminvrl78@gmail.com adresine talep gönderebilirsiniz.' },
             { question: 'Hata veya öneri nasıl bildirilir?', answer: `Hata ve önerilerinizi ${supportEmail} adresine gönderebilirsiniz.` },
           ],
         },
@@ -479,7 +479,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
         { id: 'legal-basis', title: 'Legal Basis / KVKK and GDPR Principles', paragraphs: ['Processing may be based on contract performance, consent, legitimate interests, legal obligations, product safety, and similar principles under KVKK and GDPR where applicable. Consent or preference controls may be provided where required.'] },
         { id: 'data-retention', title: 'Data Retention', paragraphs: ['Data may be retained for as long as needed to provide the service and fulfill the purposes described above. After account deletion, limited records may be retained for legal, security, financial, store transaction, fraud prevention, or abuse prevention requirements.'] },
         { id: 'data-security', title: 'Data Security', paragraphs: ['Evlio is designed to use trusted infrastructure providers and reasonable technical and organizational safeguards. No online service can guarantee absolute security.'] },
-        { id: 'account-and-data-deletion', title: 'Account and Data Deletion', paragraphs: ['Account and data deletion instructions are available on the Evlio Delete Account page. You may delete your account in the app or contact support@varolapps.com.'] },
+        { id: 'account-and-data-deletion', title: 'Account and Data Deletion', paragraphs: ['Account and data deletion instructions are available on the Evlio Delete Account page. You may delete your account in the app or contact eminvrl78@gmail.com.'] },
         { id: 'childrens-privacy', title: "Children's Privacy", paragraphs: ['Evlio is not intended for children under the age required by applicable law to use digital services without parental consent. If you believe a child provided personal information, please contact us.'] },
         { id: 'international-services', title: 'International Services and Third-Party Providers', paragraphs: ['Services such as Firebase, Google AdMob, RevenueCat, Expo, the App Store, and Google Play may use infrastructure in different countries. Their own privacy and security practices may apply.'] },
         { id: 'changes-to-this-policy', title: 'Changes to This Policy', paragraphs: ['This policy may be updated as Evlio evolves or as third-party services change. The latest version will be published on this page.'] },
@@ -554,7 +554,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
             { question: 'What is a shared workspace?', answer: 'A shared workspace is intended to help couples track lists and tasks together in the same preparation space.' },
             { question: 'Does it work offline?', answer: 'Yes. Evlio is being developed with offline use and synchronization in mind.' },
             { question: 'Is my data safe?', answer: 'Evlio is designed to use trusted infrastructure providers and reasonable technical safeguards. No digital service can guarantee absolute security.' },
-            { question: 'How can I delete my account?', answer: 'Account deletion steps are explained on the Evlio Delete Account page. You can also contact support@varolapps.com.' },
+            { question: 'How can I delete my account?', answer: 'Account deletion steps are explained on the Evlio Delete Account page. You can also contact eminvrl78@gmail.com.' },
             { question: 'Can ads be removed?', answer: 'Premium options may affect the ad experience. Details will be explained in the app after release.' },
             { question: 'How do I report a bug?', answer: `Send bug reports to ${supportEmail} with device, operating system, and app version details.` },
           ],
@@ -608,7 +608,7 @@ export const legalPages: Record<Locale, Record<LegalPageKey, LegalPageData>> = {
             { question: 'Will ads be shown?', answer: 'Some versions of Evlio may show ads through Google AdMob.' },
             { question: 'Can ads be removed?', answer: 'Premium options may affect the ad experience. Details will be explained in the app.' },
             { question: 'Is my data safe?', answer: 'Evlio is designed to use trusted infrastructure providers and reasonable safeguards. No digital service can guarantee absolute security.' },
-            { question: 'How can I delete my account?', answer: 'Use Settings > Account > Delete Account in the app or send a request to support@varolapps.com.' },
+            { question: 'How can I delete my account?', answer: 'Use Settings > Account > Delete Account in the app or send a request to eminvrl78@gmail.com.' },
             { question: 'How do I report a bug or suggestion?', answer: `Send bugs and suggestions to ${supportEmail}.` },
           ],
         },

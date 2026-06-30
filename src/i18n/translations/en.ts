@@ -10,7 +10,7 @@ export const en: typeof tr = {
       terms: 'Terms',
       deleteAccount: 'Delete Account',
     },
-    supportEmail: 'support@varolapps.com',
+    supportEmail: 'eminvrl78@gmail.com',
     lastUpdated: 'Last updated',
     onThisPage: 'On this page',
     needHelp: 'Need help?',
