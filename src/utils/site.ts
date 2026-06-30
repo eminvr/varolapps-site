@@ -8,6 +8,10 @@ export const siteConfig = {
 export const routePaths = {
   home: '/',
   evlio: '/apps/evlio',
+  evlioPrivacy: '/apps/evlio/privacy',
+  evlioTerms: '/apps/evlio/terms',
+  evlioSupport: '/apps/evlio/support',
+  evlioDeleteAccount: '/apps/evlio/delete-account',
   privacy: '/privacy',
   terms: '/terms',
   support: '/support',

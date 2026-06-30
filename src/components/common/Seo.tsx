@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import type { Locale } from '../../i18n/config'
 import { siteConfig } from '../../utils/site'
 
 type SeoProps = {
@@ -8,6 +9,11 @@ type SeoProps = {
   ogTitle?: string
   ogDescription?: string
   ogImage?: string
+  locale?: Locale
+  alternates?: {
+    hrefLang: string
+    href: string
+  }[]
 }
 
 const absoluteUrl = (pathOrUrl: string) => {
@@ -42,6 +48,19 @@ const upsertCanonical = (href: string) => {
   element.setAttribute('href', href)
 }
 
+const upsertAlternates = (alternates: NonNullable<SeoProps['alternates']>) => {
+  document.head.querySelectorAll('link[data-seo-alternate="true"]').forEach((element) => element.remove())
+
+  alternates.forEach((alternate) => {
+    const element = document.createElement('link')
+    element.setAttribute('rel', 'alternate')
+    element.setAttribute('hrefLang', alternate.hrefLang)
+    element.setAttribute('href', alternate.href)
+    element.setAttribute('data-seo-alternate', 'true')
+    document.head.appendChild(element)
+  })
+}
+
 export function Seo({
   title,
   description,
@@ -49,6 +68,8 @@ export function Seo({
   ogTitle = title,
   ogDescription = description,
   ogImage = siteConfig.defaultOgImage,
+  locale,
+  alternates = [],
 }: SeoProps) {
   useEffect(() => {
     const pageTitle = title.includes(siteConfig.name) ? title : `${title} | ${siteConfig.name}`
@@ -56,6 +77,9 @@ export function Seo({
     const imageUrl = absoluteUrl(ogImage)
 
     document.title = pageTitle
+    if (locale) {
+      document.documentElement.lang = locale
+    }
 
     upsertMeta('meta[name="description"]', 'name', 'description', description)
     upsertMeta('meta[property="og:type"]', 'property', 'og:type', 'website')
@@ -64,7 +88,8 @@ export function Seo({
     upsertMeta('meta[property="og:url"]', 'property', 'og:url', canonicalUrl)
     upsertMeta('meta[property="og:image"]', 'property', 'og:image', imageUrl)
     upsertCanonical(canonicalUrl)
-  }, [canonical, description, ogDescription, ogImage, ogTitle, title])
+    upsertAlternates(alternates)
+  }, [alternates, canonical, description, locale, ogDescription, ogImage, ogTitle, title])
 
   return null
 }

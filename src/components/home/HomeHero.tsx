@@ -1,8 +1,10 @@
 import { Link } from 'react-router'
 import heroImage from '../../assets/home-hero.png'
-import { routePaths } from '../../utils/site'
+import { useLocale } from '../../i18n/useLocale'
 
 export function HomeHero() {
+  const { path, t } = useLocale()
+
   return (
     <section className="relative isolate overflow-hidden border-b border-neutral-200 bg-white">
       <img
@@ -18,27 +20,26 @@ export function HomeHero() {
       <div className="mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-6xl items-center px-6 py-20 sm:min-h-[680px] sm:py-28">
         <div className="max-w-4xl">
           <p className="inline-flex rounded-full border border-neutral-200 bg-white/80 px-4 py-2 text-sm font-medium text-neutral-600 shadow-sm backdrop-blur">
-            Independent mobile app studio
+            {t.home.hero.eyebrow}
           </p>
           <h1 className="mt-8 max-w-4xl text-5xl font-semibold tracking-normal text-neutral-950 sm:text-6xl lg:text-7xl">
-            Günlük hayatı kolaylaştıran modern mobil uygulamalar.
+            {t.home.hero.title}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 sm:text-xl">
-            Varol Apps; sade, hızlı ve kullanışlı mobil uygulamalar geliştirir. İlk ürünümüz Evlio,
-            evlilik hazırlığı sürecini daha düzenli ve stressiz hale getirmek için tasarlandı.
+            {t.home.hero.description}
           </p>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link
               className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-neutral-800"
-              to={routePaths.evlio}
+              to={path('evlio')}
             >
-              Evlio'yu İncele
+              {t.home.hero.primaryCta}
             </Link>
             <Link
               className="inline-flex items-center justify-center rounded-full border border-neutral-300 bg-white/80 px-6 py-3 text-sm font-semibold text-neutral-950 shadow-sm backdrop-blur transition hover:border-neutral-400 hover:bg-white"
-              to={routePaths.support}
+              to={path('support')}
             >
-              Destek Al
+              {t.home.hero.secondaryCta}
             </Link>
           </div>
         </div>

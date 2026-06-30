@@ -1,27 +1,15 @@
+import { useLocale } from '../../i18n/useLocale'
 import { HomeSection } from './HomeSection'
 import { SectionIntro } from './SectionIntro'
 
-const studioFeatures = [
-  {
-    title: 'Minimal deneyim',
-    description: 'Karmaşık süreçleri sade arayüzlerle daha yönetilebilir hale getiririz.',
-  },
-  {
-    title: 'Mobile-first yaklaşım',
-    description: 'Ürünleri en baştan telefon ekranı ve gerçek kullanım alışkanlıkları için tasarlarız.',
-  },
-  {
-    title: 'Uzun vadeli yapı',
-    description: 'Her uygulama, ileride büyüyebilecek temiz ve sürdürülebilir bir ürün mantığıyla geliştirilir.',
-  },
-] as const
-
 export function StudioSection() {
+  const { t } = useLocale()
+
   return (
     <HomeSection className="pt-8">
-      <SectionIntro align="center" title="Basit, hızlı ve düşünülmüş ürünler." />
+      <SectionIntro align="center" title={t.home.studio.title} />
       <div className="mt-12 grid gap-4 md:grid-cols-3">
-        {studioFeatures.map((feature) => (
+        {t.home.studio.features.map((feature) => (
           <article
             className="rounded-3xl border border-neutral-200 bg-gradient-to-b from-white to-neutral-50 p-6 shadow-sm"
             key={feature.title}

@@ -1,20 +1,9 @@
-import { Seo } from '../components/common/Seo'
-import { PagePlaceholder } from '../components/ui/PagePlaceholder'
-import { routePaths } from '../utils/site'
+import { LegalPage } from '../components/legal/LegalPage'
+import { legalPages } from '../data/legal'
+import { useLocale } from '../i18n/useLocale'
 
 export function PrivacyPage() {
-  return (
-    <>
-      <Seo
-        canonical={routePaths.privacy}
-        description="Privacy policy placeholder for Varol Apps."
-        title="Privacy"
-      />
-      <PagePlaceholder
-        description="Privacy policy content will be added in a later iteration."
-        eyebrow="Legal"
-        title="Privacy"
-      />
-    </>
-  )
+  const { locale } = useLocale()
+
+  return <LegalPage page={legalPages[locale].generalPrivacy} />
 }

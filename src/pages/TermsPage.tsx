@@ -1,20 +1,9 @@
-import { Seo } from '../components/common/Seo'
-import { PagePlaceholder } from '../components/ui/PagePlaceholder'
-import { routePaths } from '../utils/site'
+import { LegalPage } from '../components/legal/LegalPage'
+import { legalPages } from '../data/legal'
+import { useLocale } from '../i18n/useLocale'
 
 export function TermsPage() {
-  return (
-    <>
-      <Seo
-        canonical={routePaths.terms}
-        description="Terms of service placeholder for Varol Apps."
-        title="Terms"
-      />
-      <PagePlaceholder
-        description="Terms content will be added in a later iteration."
-        eyebrow="Legal"
-        title="Terms"
-      />
-    </>
-  )
+  const { locale } = useLocale()
+
+  return <LegalPage page={legalPages[locale].generalTerms} />
 }

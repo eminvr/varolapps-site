@@ -1,23 +1,27 @@
 import { Link } from 'react-router'
 import { Seo } from '../components/common/Seo'
 import { PagePlaceholder } from '../components/ui/PagePlaceholder'
-import { routePaths } from '../utils/site'
+import { canonicalUrl, localizedRoutes } from '../i18n/routes'
+import { useLocale } from '../i18n/useLocale'
 
 export function NotFoundPage() {
+  const { locale, path, t } = useLocale()
+
   return (
     <>
       <Seo
-        canonical={routePaths.home}
-        description="The requested page could not be found."
-        title="Page Not Found"
+        canonical={canonicalUrl(localizedRoutes.home, locale)}
+        description={t.common.notFound.description}
+        locale={locale}
+        title={t.common.notFound.title}
       />
       <PagePlaceholder
-        description="The page you are looking for does not exist."
+        description={t.common.notFound.description}
         eyebrow="404"
-        title="Page Not Found"
+        title={t.common.notFound.title}
       >
-        <Link className="font-medium text-neutral-950 underline underline-offset-4" to={routePaths.home}>
-          Go to Varol Apps
+        <Link className="font-medium text-neutral-950 underline underline-offset-4" to={path('home')}>
+          {t.common.notFound.action}
         </Link>
       </PagePlaceholder>
     </>

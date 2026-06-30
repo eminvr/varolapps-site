@@ -7,6 +7,7 @@ export const apps: AppInfo[] = [
     name: 'Evlio',
     slug: 'evlio',
     path: routePaths.evlio,
+    routeKey: 'evlio',
     description: 'Evlilik hazırlığı sürecindeki listeleri, alışverişleri ve ortak planları düzenlemek için geliştirilen mobil uygulama.',
     status: 'coming-soon',
   },
